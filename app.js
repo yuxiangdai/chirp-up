@@ -1,3 +1,5 @@
+var express = require('express');
+var app = express();
 var firebase = require('firebase');
 
 var config = {
@@ -16,3 +18,7 @@ admin.initializeApp({
 });
 
 firebase.initializeApp(config);
+
+app.get('/', function(req, res) {
+   res.send('hello world');
+});
