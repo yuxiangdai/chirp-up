@@ -18,6 +18,7 @@
   "homepage": "https://github.com/angusjlowe/chirp-up#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "firebase": "^3.6.4"
+    "firebase": "^3.6.4",
+    "firebase-admin": "^4.0.4"
   }
 }
