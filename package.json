@@ -1,0 +1,19 @@
+{
+  "name": "chirp-up",
+  "version": "1.0.0",
+  "description": "a medium for discussion between those who hold opposing views on contreversial topics using the twitter api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angusjlowe/chirp-up.git"
+  },
+  "author": "ediandengsci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angusjlowe/chirp-up/issues"
+  },
+  "homepage": "https://github.com/angusjlowe/chirp-up#readme"
+}
