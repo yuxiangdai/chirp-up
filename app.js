@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var firebase = require('firebase');
 
+app.set('view engine', 'ejs');
+
 var config = {
     apiKey: "AIzaSyDuf3gqHFDVEwkXveDlVT7jrW58MzdnR7Q",
     authDomain: "chirp-up.firebaseapp.com",
@@ -20,7 +22,7 @@ admin.initializeApp({
 firebase.initializeApp(config);
 
 app.get('/', function(req, res) {
-   res.send('hello world');
+   res.render('home');
 });
 
 app.listen(process.env.PORT || 3000, function() {
