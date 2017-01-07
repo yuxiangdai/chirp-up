@@ -11,7 +11,7 @@ var config = {
 var admin = require("firebase-admin");
 
 admin.initializeApp({
-  credential: admin.credential.cert("path/to/serviceAccountKey.json"),
+  credential: admin.credential.cert(__dirpath + "/chirp-up-firebase-adminsdk-ftpw7-139d5bd98b.json"),
   databaseURL: "https://chirp-up.firebaseio.com"
 });
 
