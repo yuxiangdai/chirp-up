@@ -1,0 +1,55 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="topics.css"></link>
+        <style type="text/css">
+            body {
+                background-color:lightgreen;
+                font-family:"Comic Sans MS";
+            }
+            h1 {
+                color:green;
+            }
+            
+            h2 {
+                color:forestgreen;
+            }
+            h3 {
+                color:seagreen;
+                font-weight:lighter;
+            }
+            
+            label {
+                color:mediumseagreen;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Please choose your topic preferences</h1>
+        <form action="/submit">
+            <fieldset>
+                <h2>Nutrition</h2>
+                <h3>Would you eat GMOs?</h3>
+                <label><input type="radio" name="GMO" value="yes">Yes</label>
+                <label><input type="radio" name="GMO" value="no">No</label>
+                <label><input type="radio" name="GMO" value="none" checked>No answer</label>
+                <input type="text" placeholder="reasoning">
+            </fieldset>
+            
+            <fieldset>
+                <h2>Life</h2>
+                <h3>Is your life good?</h3>
+                <label><input type="radio" name="life good" value="yes">Yes</label>
+                <input type="text" placeholder="reasoning">
+                <label><input type="radio" name="life good" value="no">No</label>
+                <label><input type="radio" name="life good" value="none" checked>No answer</label>
+                
+            </fieldset>
+            
+            <a href="https://chirp-up-yuxiangdai.c9users.io/next">Submit</a>
+        </form>
+        
+    </body>
+</html>
