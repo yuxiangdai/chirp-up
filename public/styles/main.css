@@ -79,7 +79,7 @@ main, #messages-card {
   width: 30px;
   height: 30px;
   background-size: 30px;
-  border-radius: 20px;
+  border-radius: 0;
 }
 .message-container .spacing {
   display: table-cell;
@@ -145,7 +145,7 @@ main, #messages-card {
   width: 40px;
   height: 40px;
   background-size: 40px;
-  border-radius: 20px;
+  border-radius: 0;
 }
 #user-container #user-name {
   font-size: 16px;

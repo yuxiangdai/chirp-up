@@ -140,7 +140,7 @@ FriendlyChat.prototype.saveImageMessage = function(event) {
 
 // Signs-in Friendly Chat.
 FriendlyChat.prototype.signIn = function() {
-  var provider = new firebase.auth.GoogleAuthProvider();
+  var provider = new firebase.auth.FacebookAuthProvider();
   this.auth.signInWithPopup(provider);
 };
 
