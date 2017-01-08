@@ -12,12 +12,14 @@ var config = {
     messagingSenderId: "66307837599"
 };
 
+firebase.initializeApp(config);
+
 var admin = require("firebase-admin");
 var database = firebase.database();
 
 function initializeDatabase(userId){
 
-  firebase.database().ref('users/' + userID).set({
+  firebase.database().ref('users/' + userId).set({
     "responses":{
       "topic":{
           "politics":{
@@ -25,7 +27,7 @@ function initializeDatabase(userId){
                   "text": "Do you think trump is a good president?",
                   "yesno": "",
                   "reasoning": ""
-              }        
+              }
           },
           "nutrition":{
               "question": {
@@ -51,11 +53,10 @@ admin.initializeApp({
   databaseURL: "https://chirp-up.firebaseio.com"
 });
 
-firebase.initializeApp(config);
-initializeDatabase("sdy1130");
 
 app.get('/', function(req, res) {
    res.render('home');
+   initializeDatabase("sdy1130");
 });
 
 app.listen(process.env.PORT || 3000, function() {
