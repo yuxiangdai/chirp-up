@@ -32,6 +32,7 @@ function FriendlyChat() {
   this.signInButton = document.getElementById('sign-in');
   this.signOutButton = document.getElementById('sign-out');
   this.signInSnackbar = document.getElementById('must-signin-snackbar');
+  this.deleteButton = document.getElementById('delete-button');
 
   // Saves message on form submit.
   this.messageForm.addEventListener('submit', this.saveMessage.bind(this));
@@ -42,6 +43,8 @@ function FriendlyChat() {
   var buttonTogglingHandler = this.toggleButton.bind(this);
   this.messageInput.addEventListener('keyup', buttonTogglingHandler);
   this.messageInput.addEventListener('change', buttonTogglingHandler);
+
+  this.deleteButton.addEventListener('click', this.deleteDatabase.bind(this));
 
   // Events for image upload.
   this.submitImageButton.addEventListener('click', function() {
@@ -60,6 +63,12 @@ FriendlyChat.prototype.initFirebase = function() {
   this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
 };
 
+//deletes database
+
+FriendlyChat.prototype.deleteDatabase = function() {
+   this.database.ref('messages').remove();
+};
+
 // Loads chat messages history and listens for upcoming ones.
 FriendlyChat.prototype.loadMessages = function() {
   this.messagesRef = this.database.ref('messages');
@@ -70,6 +79,9 @@ FriendlyChat.prototype.loadMessages = function() {
   }.bind(this);
   this.messagesRef.limitToLast(12).on('child_added', setMessage);
   this.messagesRef.limitToLast(12).on('child_changed', setMessage);
+  this.database.ref('/').on('child_removed', function() {
+     console.log("removed");
+  });
   console.log("loadmessages");
 };
 
