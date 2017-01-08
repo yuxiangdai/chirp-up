@@ -1,0 +1,8 @@
+Chirp-Up
+
+How it works
+Chirp-Up is a chatroom dedicated to public discourse of contentious topics.
+
+Motivation
+According to Zeynep Tufekci, the rise of big data has allowed political targeting using tailored, individualized information. As a result, the public sphere is diminished and civil discourse becomes more difficult. There are little informatioin supporting the opposing side, causing people's worldviews to become static. Rather than debating against opposing viewpoint, people are forming echo chambers of similar opinions and only confirming their own viewpoints.
+This application aims to provide a room dedicated for civil discourse by giving people opportunity to discuss and debate with people sharing opposing viewpoints. Even if the user's stance upon a topic is not changed, a mutual understanding would lead to more respect for the opposing side, uniting the global community.
