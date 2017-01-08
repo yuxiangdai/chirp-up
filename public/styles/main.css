@@ -20,13 +20,20 @@ html, body {
 main, #messages-card {
   height: 100%;
   padding-bottom: 0;
+  padding-right:0;
+
 }
 #messages-card-container {
   height: calc(100% - 150px);
   padding-bottom: 0;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:20px;
+
 }
 #messages-card {
   margin-top: 15px;
+  margin:auto;
 }
 .mdl-layout__header-row span {
   margin-left: 15px;
@@ -186,6 +193,9 @@ main, #messages-card {
     height: 33px;
     background-size: 33px;
   }
+}
+@media screen and (min-width: 10px) {
+
 }
 .mdl-textfield__label:after {
   background-color: #0288D1;
