@@ -11,12 +11,12 @@
 	        font-size: 150%;
 	        background-image:  url(https://source.unsplash.com/NDuPLKYRXQU/1600x900);
 	    }
-	    
+
 	    p{
 	        margin-top: 40px;
 	        opacity: 0.75;
 	    }
-	    
+
 	    button{
 	        cursor:pointer;
 	        outline: none;
@@ -40,20 +40,20 @@
             opacity: 0.5;
             display: flex;
             justify-content: center;
-            
+
         }
-        
+
         .container {
             padding: 15px;
             background: white;
             margin: 3%;
         }
-        
-        
+
+
         button:hover {
           opacity: 0.75;
         }
-        
+
 	    button#life {
           background-image: url(https://source.unsplash.com/8D_Wbpf33bA/1056x598)
         }
@@ -64,7 +64,7 @@
         button#nutrition {
             background-image: url(https://source.unsplash.com/zdunBSAi3P0/1056x598)
        }
-       
+
        a{
             color: #fff;
             font-size: 20px;
@@ -80,7 +80,7 @@
             justify-content: center;
             background-color: #2196F3;
         }
-        
+
         a:hover {
           opacity: 1;
         }
@@ -89,20 +89,14 @@
 <body>
     <div class="container">
         <div>
-            <p>What would you like to discuss today?</p> 
+            <p>What would you like to discuss today?</p>
         </div>
         <div>
              <input type="checkbox" id="life"><span>Life</span></input>
              <input type="checkbox" id="nutrition">Nutrition</input>
         </div>
         <a href="https://chirp-up-yuxiangdai.c9users.io/topics">Submit</a>
-        <input name="like" id="like" value="Like" type="submit" />
-        <script>
-            $('#like').click(function(){
-                $.post('/test')
-            });
-        </script>
-        
+
     </div>
 </body>
 </html>
