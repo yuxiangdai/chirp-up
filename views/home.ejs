@@ -8,14 +8,25 @@
 </head>
 <body>
     <div class="container" id="survey">
-        <div>
-            <p>What would you like to discuss today?</p>
+		<form action="/" method="post">
+		  <input type="text" name="uid" id="uid" style="visibility:hidden" value="hello">
+        <div id ="q1">
+            <p>Would you eat a genetically modified tomato?</p>
         </div>
         <div>
-             <input type="checkbox" id="life"><span>Life</span></input>
-             <input type="checkbox" id="nutrition">Nutrition</input>
+             <input type="radio" name="q1" value="Yes">Yes</input>
+             <input type="radio" name="q1" value="No">No</input>
         </div>
-        <a href="https://chirp-up-yuxiangdai.c9users.io/topics">Submit</a>
+		  <div id ="q2">
+            <p>Do you think the world is better off than it was ten years ago?</p>
+        </div>
+        <div>
+			  <input type="radio" name="q2" value="Yes">Yes</input>
+			  <input type="radio" name="q2" value="No">No</input>
+        </div>
+		  <br>
+		  <input type="submit" value="Submit">
+	   </form>
     </div>
 	 <div class="container" id="buttons">
 		 <p>- </p>

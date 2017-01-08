@@ -21,23 +21,25 @@ signInButton.addEventListener('click', function() {
 
 var updateUsers = function(user) {
    console.log("updating users");
-   var name = null;
+   var userPresent = false;
    var userId = user.uid;
    console.log(userId);
    var userRef = firebase.database().ref("/users/" + userId);
    userRef.once('value').then(function(snapshot) {
       var val = snapshot.val();
       if(val != null) {
-         name = val.name;
+         userPresent = true;
+      }
+      console.log(userPresent);
+      if(!userPresent) {
+         var data = {
+            name: user.displayName,
+            email: user.email,
+            answers: "none"
+         };
+         firebase.database().ref("/users").child(userId).set(data);
       }
    });
-   if(name == null) {
-      var data = {
-         name: user.displayName,
-         email: user.email
-      };
-      firebase.database().ref("/users").child(userId).set(data);
-   }
 }
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -47,11 +49,11 @@ firebase.auth().onAuthStateChanged(function(user) {
     var strArray = userString.split(" ");
     strArray.pop();
     var firstName = strArray.join('');
-    $("#survey").remove();
     $("p").append("Welcome " + firstName);
     console.log('firstName');
+    $('#uid').attr("value", user.uid);
     updateUsers(user);
   } else {
-    // No user is signed in.
+     // No user is signed in.
   }
 });
