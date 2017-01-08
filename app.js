@@ -41,44 +41,13 @@ app.post('/', function(req,res) {
    };
    if(userId != null) {
       firebase.database().ref("users/" + userId).child("answers").set(data);
-      res.send("success");
+      res.render("home");
       console.log(userId);
    } else {
       console.log("Problem with retrieving uid");
       res.send("error");
    }
 });
-
-function initializeDatabase(userId){
-
-  firebase.database().ref('users/' + userId).set({
-    "responses":{
-      "topic":{
-          "nutrition":{
-              "question": {
-                  "text": "Would you eat genetically modified food?",
-                  "yesno": "",
-                  "reasoning": ""
-              }
-          },
-          "life":{
-              "question": {
-                  "text": "Are you satistfied with your life?",
-                  "yesno": "",
-                  "reasoning": ""
-          }
-      }
-  }
-  }
-  })
-}
-
-function answerSurvey(userId, topic, yesno, reasoning) {
-  firebase.database().ref('users/' + userId + '/responses/topic/' + topic + '/question' ).set({
-    "yesno": yesno,
-    "reasoning": reasoning
-  });
-}
 
 app.get('/chatroom', function(req,res) {
    res.render('chatroom');
