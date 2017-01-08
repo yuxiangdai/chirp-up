@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <p>- </p>
+      <button id="sign-in">Sign-in</button>
+      <button id="chatroom">Chatroom</button>
+      <button id="sign-out">Sign-out</button>
+      <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+      <script>
+          // Initialize Firebase
+          var config = {
+             apiKey: "AIzaSyDuf3gqHFDVEwkXveDlVT7jrW58MzdnR7Q",
+             authDomain: "chirp-up.firebaseapp.com",
+             databaseURL: "https://chirp-up.firebaseio.com",
+             storageBucket: "chirp-up.appspot.com",
+             messagingSenderId: "66307837599"
+          };
+
+          firebase.initializeApp(config);
+      </script>
+
+      <script src="scripts/home.js"></script>
+   </body>
+</html>
